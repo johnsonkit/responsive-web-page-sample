@@ -187,6 +187,13 @@
   }
 
   .filter {
+    .inner-container {
+      @include mq-tl-up {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
     &--nav {
       list-style: none;
       padding: 0;
