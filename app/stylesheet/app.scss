@@ -166,7 +166,7 @@
     }
     h2 {
       margin: 0 0 11px;
-      max-width: 340px;
+      max-width: 360px;
       @include font--roboto(36px, #fff, 600, 44px, 0);
       @include mq-tl-up {
         max-width: 100%;
@@ -226,14 +226,14 @@
     }
     .sorting {
       text-align: right;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       &-article--select {
         border: solid 1px #000;
         background: transparent;
-        @include font--roboto(14px, #000, 400, 1, 0);
+        @include font--roboto(16px, #000, 400, 1.5, 0);
       }
       &-article--label {
-        @include font--roboto(14px, #000, 400, 1, 0);
+        @include font--roboto(16px, #000, 400, 1.5, 0);
       }
     }
   }
