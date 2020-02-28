@@ -1,0 +1,9 @@
+@mixin font--roboto($size: false, $colour: false, $fontWeight: false,  $lineHeight: false, $letterSpacing: false) {
+    font-family: "Roboto";
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $fontWeight { font-weight: $fontWeight; }
+    @if $lineHeight { line-height: $lineHeight; }
+    @if $letterSpacing { letter-spacing: $letterSpacing; }
+}
+

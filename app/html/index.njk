@@ -1,0 +1,159 @@
+{% extends 'layouts/base.njk' %}
+{% block title -%}{{index.branding}}{%- endblock %}
+{% block meta -%}
+<link rel="icon" href="./images/favicon.png" type="image/png" />
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+{%- endblock %}
+{% block css -%}
+<link rel="stylesheet" href="css/app.css" inline>{%- endblock %}
+{% block js -%}
+<script src="js/app.js" inline></script>{%- endblock %}
+
+{% block content -%}
+<div class="app">
+    <!-- Header -->
+    <header class="header">
+        <h1>
+            <a href="./">
+                <img src="./images/branding.svg" alt="{{index.branding}}" />
+            </a>
+        </h1>
+
+        <ul class="header--nav">
+            <li>
+                <a href="{{index.button.signup.url}}" class="btn btn--solid">{{index.button.signup.title}}</a>
+            </li>
+            <li>
+                <a href="{{index.button.login.url}}" class="btn">{{index.button.login.title}}</a>
+            </li>
+        </ul>
+
+        <div class="header--nav__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <div class="hero">
+            <div class="inner-container">
+                <h2>{{index.hero.header}}</h2>
+                <p>{{index.hero.desc}}</p>
+                <a href="{{index.button.cta.url}}" class="btn btn--solid">{{index.button.cta.title}}</a>
+            </div>
+        </div>
+
+        <div class="filter">
+            <div class="inner-container">
+                <ul class="filter--nav">
+                    {% for item in index.filterItems %}
+                    <li>
+                        <a href="javascript:void(0)" data-id={{item.id}} class="{{item.preClass}}">{{item.title}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="sorting">
+                    <label for="sorting-article--select" class="sorting-article--label">Sort by</label>
+                    <select name="sorting-article--select" class="sorting-article--select" id="sorting-article--select">
+                        <option selected disabled value="NA">Please Select</option>
+                        <option value="title">A to Z</option>
+                        <option value="price">Price</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="inner-container">
+                <div class="article--list__container">
+                    <ul class="article--list">
+
+                        {# <li class="article" data-type="communication">
+                            <div class="article--img">
+                                <picture>
+                                    <source media='(min-width: 1024px)' srcset='images/communication.jpg' />
+                                    <img src='images/communication@2x.jpg' />
+                                </picture>
+                                <span class="article--img__ribbon">communication</span>
+                            </div>
+                            <div class="article--text">
+                                <h3 class="article--text__title">Crime Risk New</h3>
+                                <p class="article--text__desc">Donec a sodales lorem. Curabitur at nulla nec sem
+                                    volutpat accumsan placerat nec elit. Ut bibendum dui vitae purus fringilla rhoncus.
+                                    Praesent volutpat felis vitae felis ultricies rhoncus. Nulla maximus nibh vel enim
+                                    ullamcorper aliquam. Nam efficitur est nibh, id mollis nisl ullamcorper et.</p>
+                                <p class="article--text__price"><strong>Price:</strong> £50</p>
+                            </div>
+                        </li>
+                        <li class="article" data-type="tax">
+                            <div class="article--img">
+                                <picture>
+                                    <source media='(min-width: 1024px)' srcset='images/tax.jpg' />
+                                    <img src='images/tax@2x.jpg' />
+                                </picture>
+                                <span class="article--img__ribbon">tax</span>
+                            </div>
+                            <div class="article--text">
+                                <h3 class="article--text__title">Crime Risk New</h3>
+                                <p class="article--text__desc">Donec a sodales lorem. Curabitur at nulla nec sem
+                                    volutpat accumsan placerat nec elit. Ut bibendum dui vitae purus fringilla rhoncus.
+                                    Praesent volutpat felis vitae felis ultricies rhoncus. Nulla maximus nibh vel enim
+                                    ullamcorper aliquam. Nam efficitur est nibh, id mollis nisl ullamcorper et.</p>
+                                <p class="article--text__price"><strong>Price:</strong> £50</p>
+                            </div>
+                        </li>
+                        <li class="article" data-type="technology">
+                            <div class="article--img">
+                                <picture>
+                                    <source media='(min-width: 1024px)' srcset='images/technology.jpg' />
+                                    <img src='images/technology@2x.jpg' />
+                                </picture>
+                                <span class="article--img__ribbon">technology</span>
+                            </div>
+                            <div class="article--text">
+                                <h3 class="article--text__title">Crime Risk New</h3>
+                                <p class="article--text__desc">Donec a sodales lorem. Curabitur at nulla nec sem
+                                    volutpat accumsan placerat nec elit. Ut bibendum dui vitae purus fringilla rhoncus.
+                                    Praesent volutpat felis vitae felis ultricies rhoncus. Nulla maximus nibh vel enim
+                                    ullamcorper aliquam. Nam efficitur est nibh, id mollis nisl ullamcorper et.</p>
+                                <p class="article--text__price"><strong>Price:</strong> £50</p>
+                            </div>
+                        </li>
+
+                        <a href="javascript:void(0)" class="btn btn--loadmore">Load more</a> #}
+                    </ul>
+                    <a href="javascript:void(0)" class="btn btn--loadmore js-load-article-btn">Load more</a>
+                </div>
+                <div class="sub-nav--list--container">
+                    <ul class="sub-nav--list">
+                        {% for item in index.subNavItems %}
+                        <li class="{{item.preClass}}">
+                            <a href="{{item.url}}">{{item.title}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>{{index.footer.copyright}}</p>
+        <ul>
+            {% for item in index.footer.list %}
+            <li>
+                <a href="{{title.url}}">{{item.title}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </footer>
+
+</div>
+{# Add 'fetch','Promise' and 'classList' polyfill #}
+<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.js?features=fetch%2CPromise%2CElement.prototype.classList"></script>
+{%- endblock %}

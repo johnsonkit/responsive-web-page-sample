@@ -1,0 +1,102 @@
+{
+	"index": {
+		"branding": "Branding",
+		"button": {
+			"signup": {
+				"url": "/",
+				"title": "Sign up"
+			},
+			"login": {
+				"url": "/",
+				"title": "Login"
+			},
+			"cta": {
+				"url": "/",
+				"title": "Call to action"
+			}
+		},
+		"hero": {
+			"header": "Vestibulum pulvinar nisi orci vel",
+			"desc": "Nam velit libero, ornare ac neque vitae, elementum lobortis justo. Vestibulum non finibus dolor."
+		},
+		"filterItems": [
+			{
+				"id": "all",
+				"title": "All Courses",
+				"preClass": "active"
+			},
+			{
+				"id": "tax",
+				"title": "Tax"
+			},
+			{
+				"id": "communication",
+				"title": "Communication"
+			},
+			{
+				"id": "technology",
+				"title": "Technology"
+			}
+		],
+		"subNavItems": [
+			{
+				"url": "/",
+				"title": "Navigation link"
+			},
+			{
+				"url": "/",
+				"title": "Navigation link"
+			},
+			{
+				"url": "/",
+				"title": "Navigation link"
+			},
+			{
+				"url": "/",
+				"title": "Navigation link"
+			},
+			{
+				"url": "/",
+				"title": "Navigation link"
+			},
+			{
+				"url": "/",
+				"title": "Navigation link"
+			},
+			{
+				"url": "/",
+				"title": "Navigation link"
+			},
+			{
+				"url": "/",
+				"title": "Navigation link"
+			},
+			{
+				"url": "/",
+				"title": "Navigation link"
+			},
+			{
+				"url": "/",
+				"title": "Special link",
+				"preClass": "hl"
+			}
+		],
+		"footer": {
+			"copyright": "produced by Company Name",
+			"list": [
+				{
+					"url": "/",
+					"title": "Terms"
+				},
+				{
+					"url": "/",
+					"title": "FAQs"
+				},
+				{
+					"url": "/",
+					"title": "Privacy Policy"
+				}
+			]
+		}
+	}
+}
