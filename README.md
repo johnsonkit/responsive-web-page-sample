@@ -1,3 +1,9 @@
+# Note
+
+[Demo](https://johnsonkit.github.io/responsive-web-page-sample/dist/)
+
+To run the JSON server in dev mode, go to the `JSON_SERVER` folder, run the command `json-server --watch db.json -p 3003 -d 2000`
+
 # Introduction
 A simple-frontend-starter utilizes the gulp toolkit for automating tasks in your development workflow.
 
